@@ -44,16 +44,11 @@ if (a >= b && a >= c) {
 // Bài 4: Kiểm tra số cùng dấu
 var a = 0;
 var b = -2;
-if (a * b > 0 && a !== 0 && b !== 0) {
+if ((a >= 0 && b >= 0) || a * b > 0) {
   console.log('Hai số cùng dấu');
-} else if (a * b < 0 && a !== 0 && b !== 0) {
-  console.log('Hai số ngược dấu');
-} else if (a > 0 || b > 0) {
-  console.log('Hai số ngược cùng dấu');
 } else {
   console.log('Hai số ngược dấu');
 }
-
 // Bài 5: Sắp xếp 3 số
 
 var a = 5;
