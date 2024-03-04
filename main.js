@@ -29,10 +29,11 @@ console.log(s);
 
 // Bài 3: Tìm số lớn nhất
 // a, b, c
+// Cách 1:
 
 var a = 10;
 var b = 15;
-var c = 12;
+var c = 19;
 if (a >= b && a >= c) {
   console.log(`Số lớn nhất là ${a}`);
 } else if (b >= c && b >= a) {
@@ -40,6 +41,17 @@ if (a >= b && a >= c) {
 } else if (c >= a && c >= b) {
   console.log(`Số lớn nhất là ${c}`);
 }
+
+// Cách 2:
+var arr = [a, b, c];
+var max = a;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > max) {
+    max = arr[i];
+  }
+}
+
+console.log(`Số lớn nhất là ${max}`);
 
 // Bài 4: Kiểm tra số cùng dấu
 var a = 0;
@@ -50,6 +62,7 @@ if ((a >= 0 && b >= 0) || a * b > 0) {
   console.log('Hai số ngược dấu');
 }
 // Bài 5: Sắp xếp 3 số
+// Cách 1
 
 var a = 5;
 var b = -12;
@@ -68,3 +81,9 @@ if (a >= b && a >= c && b >= c) {
 } else if (c >= a && c >= b && a >= b) {
   console.log(b, a, c);
 }
+
+// Cách 2
+var arr = [];
+arr.push(a, b, c);
+arr.sort();
+console.log(arr.join(' '));
